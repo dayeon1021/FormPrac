@@ -15,6 +15,21 @@ namespace FormPrac
         public Form1()
         {
             InitializeComponent();
+            IsMdiContainer = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomForm cs = new CustomForm();
+            cs.MdiParent = this;
+            cs.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CustomForm cs = new CustomForm();
+            cs.MdiParent = this;
+            cs.ShowDialog();
         }
     }
 }
